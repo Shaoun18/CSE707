@@ -8,7 +8,7 @@ Public link to the slide (Anyone on the internet can view without login):
 https://docs.google.com/presentation/d/1X_a2lbdRvEMvZKUGdv37Yo0oNDcHdlDiPN0F0dv9XcA/edit?usp=sharing
 
 Project title:
-Exploring DDos attack and New security Technics
+Exploring DDOS Attack and New Security Technics
 
 Group Number:
 18
