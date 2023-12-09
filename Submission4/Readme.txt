@@ -2,7 +2,7 @@ Overleaf link with edit access to course instructor gmail and then email "anybod
 https://www.overleaf.com/read/fnvtjrjzpgbf#ef9a85
 
 
-Paper title: Exploring DDoS attack and New security Technics
+Paper title: Exploring DDOS Attack and New Security Technics
 
 Group Number:
 18
