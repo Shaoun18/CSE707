@@ -5,12 +5,11 @@ https://www.overleaf.com/read/fnvtjrjzpgbf#ef9a85
 Conference submitted paper / paper submission / login Link:
 
 
-Paper title: 
-Enhancing DDoS Attack Detection: A Comprehensive Approach for Robust Cybersecurity Using LSTM-KNN
+Paper title: Exploring DDos attack and New security Technics
 
 
 Paper presentation (anyone can view without login):
-https://docs.google.com/presentation/d/1hfaMVlmFcd6I2teNEPY9kXlnu34QG3DIOFnICf48P30/edit?usp=sharing
+
 
 Paper submission date (to workshop/conference):
 
