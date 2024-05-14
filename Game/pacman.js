@@ -14,6 +14,8 @@ class Pacman {
         }, 100);
     }
 
+    eatSound = document.getElementById("eatSound");
+
     moveProcess() {
         this.changeDirectionIfPossible();
         this.moveForwards();
@@ -33,6 +35,7 @@ class Pacman {
                 ) {
                     map[i][j] = 3;
                     score++;
+                    eatSound.play();
                 }
             }
         }

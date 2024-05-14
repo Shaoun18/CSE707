@@ -30,6 +30,8 @@ let ghosts = [];
 let wallSpaceWidth = oneBlockSize / 1.6;
 let wallOffset = (oneBlockSize - wallSpaceWidth) / 2;
 let wallInnerColor = "black";
+let gameOverSound = document.getElementById("gameOverSound");
+let eatingGhost = document.getElementById("eatingGhost");
 
 // we now create the map of the walls,
 // if 1 wall, if 0 not wall
@@ -45,7 +47,7 @@ let map = [
     [1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1],
     [0, 0, 0, 0, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 0, 0, 0, 0],
     [1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1],
-    [2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2],
+    [1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1],
     [1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1],
     [0, 0, 0, 0, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 0, 0, 0, 0],
@@ -89,6 +91,15 @@ let createNewPacman = () => {
 let gameLoop = () => {
     update();
     draw();
+
+    if (lives === 0) {
+        gameOverSound.play();
+        clearInterval(gameInterval); // Stop the game loop
+        canvasContext.fillStyle = "white";
+        canvasContext.font = "40px Arial";
+        canvasContext.textAlign = "center";
+        canvasContext.fillText("Game Over", canvas.width / 2, canvas.height / 2);
+    }
 };
 
 let gameInterval = setInterval(gameLoop, 1000 / fps);
@@ -100,8 +111,10 @@ let restartPacmanAndGhosts = () => {
 
 let onGhostCollision = () => {
     lives--;
+    
     restartPacmanAndGhosts();
-    if (lives == 0) {
+    if (lives !== 0) {
+        eatingGhost.play();
     }
 };
 
@@ -170,6 +183,7 @@ let draw = () => {
     drawScore();
     drawRemainingLives();
 };
+
 
 let drawWalls = () => {
     for (let i = 0; i < map.length; i++) {
