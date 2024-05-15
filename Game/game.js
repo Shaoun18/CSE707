@@ -98,7 +98,7 @@ let gameLoop = () => {
         canvasContext.fillStyle = "white";
         canvasContext.font = "40px Arial";
         canvasContext.textAlign = "center";
-        canvasContext.fillText("Game Over", canvas.width / 2, canvas.height / 2);
+        canvasContext.fillText("Game Over", (canvas.width / 2) - 45, canvas.height / 2);
     }
 };
 
