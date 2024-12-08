@@ -59,19 +59,22 @@ o	Analyze detection results.
 
 •	LSTM: Analyzes temporal correlations in network data to identify potential DDoS traffic segments.
 •	KNN: Further evaluates uncertain cases from LSTM for accurate classification.
-•	Hybrid Workflow: 
+•	== Hybrid Workflow: ==
+
 1.	Preprocess network traffic data.
 2.	Train LSTM for temporal anomaly detection.
 3.	Apply KNN for detailed analysis on ambiguous cases.
 4.	Combine results for enhanced accuracy.
 
 == Results ==
+
 The LSTM-KNN hybrid approach demonstrated:
 •	Improved Precision: Enhanced detection of subtle attack patterns.
 •	Robustness: Resilience against varying attack methods.
 •	Scalability: Efficient handling of large, dynamic datasets.
 
 == Future Scope ==
+
 •	Integration with real-time network monitoring tools.
 •	Enhancement of generalization through larger datasets.
 •	Exploration of additional ML techniques like Random Forest or Deep Learning variants.
