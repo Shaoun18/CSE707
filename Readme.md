@@ -16,7 +16,8 @@ ________________________________________
 == Introduction ==
 
 DDoS attacks are a persistent threat in cyberspace, targeting network availability by overwhelming resources. This project investigates their evolution, motivations, and real-world case studies while implementing state-of-the-art mitigation strategies using a hybrid LSTM-KNN approach.
-Features
+
+== Features ==
 •	Dynamic Traffic Behavior Analysis: Captures and analyzes network traffic patterns.
 •	Anomaly Detection: Detects deviations indicative of potential DDoS activity.
 •	LSTM-KNN Hybrid Model: 
@@ -34,7 +35,9 @@ To run the code, ensure you have the following installed:
 •	pandas
 •	Matplotlib
 •	Any other dependencies specified in requirements.txt.
-Installation
+
+== Installation ==
+
 1.	Clone this repository:
 2.	git clone https://github.com/your-repo/ddos-research.git
 3.	cd ddos-research
@@ -42,14 +45,18 @@ Installation
 5.	pip install -r requirements.txt
 6.	Run the Jupyter Notebook:
 7.	jupyter notebook
-Usage
+
+== Usage ==
+
 1.	Open DDOS_Full_Code.ipynb in Jupyter Notebook.
 2.	Follow the step-by-step instructions to: 
 o	Load network traffic datasets.
 o	Preprocess the data.
 o	Train the LSTM-KNN model.
 o	Analyze detection results.
-Methodology
+
+== Methodology ==
+
 •	LSTM: Analyzes temporal correlations in network data to identify potential DDoS traffic segments.
 •	KNN: Further evaluates uncertain cases from LSTM for accurate classification.
 •	Hybrid Workflow: 
@@ -57,15 +64,18 @@ Methodology
 2.	Train LSTM for temporal anomaly detection.
 3.	Apply KNN for detailed analysis on ambiguous cases.
 4.	Combine results for enhanced accuracy.
+
 == Results ==
 The LSTM-KNN hybrid approach demonstrated:
 •	Improved Precision: Enhanced detection of subtle attack patterns.
 •	Robustness: Resilience against varying attack methods.
 •	Scalability: Efficient handling of large, dynamic datasets.
+
 == Future Scope ==
 •	Integration with real-time network monitoring tools.
 •	Enhancement of generalization through larger datasets.
 •	Exploration of additional ML techniques like Random Forest or Deep Learning variants.
+
 == References ==
 1.	Dennis, D. (2014). The First DDoS Attack. Vice Motherboard.
 2.	Dong, S., & Sarem, M. (2020). DDoS Attack Detection Using Improved KNN. IEEE Access.
